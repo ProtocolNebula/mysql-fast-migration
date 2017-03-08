@@ -1,8 +1,9 @@
 # Mysql Fast Migration
 
 ## Description
-This is a simple PHP script which let you backup a MySQL (big databases too) and move the .sql file to another server.
-This is useful when you have to migrate a very big database and PHPMyAdmin fails or something.
+This is a simple PHP script which let you backup a MySQL (big databases too) and/or the web files for move it to another server.
+This is useful when you have to migrate a very big database and PHPMyAdmin fails or something or things such wordpress.
+You can move directly vía ftp server-2-server **(in development)**.
 
 # Configurations
 This script have all configuration in "config.php", is self descriptive, so I recommend you to read!
@@ -27,13 +28,14 @@ This script have all configuration in "config.php", is self descriptive, so I re
 5. Delete or block the script
 
 # TODO
-**IMPORTANT:** I have no plans to continue this repo if I don't need it or somewhere request to me
-You can fork and make a merge request.
+**IMPORTANT:** I will make some changes, but I have no plans to continue this repo after this if I don't need it.
+You can fork and make a merge request or ask me for some addon that you need.
 
-- [ ] Exclude tables
+- [ ] Exclude tables or their content
 - [ ] Zip & Unzip SQL file
 - [ ] Fix english text
 - [ ] Make a files backup
+- [ ] Transfer files via FTP (from any server to the other)
 
 # License
 This project is open-sourced software licensed under the [GPL license](http://www.gnu.org/copyleft/gpl.html) like "[ifsnop](https://github.com/ifsnop/mysqldump-php)" library included in this repo
