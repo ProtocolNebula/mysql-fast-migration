@@ -19,7 +19,7 @@ function executeQuery($query) {
 	}
 	
 	// Perform the query
-	mysqli_query ($GLOBALS['conn'], $query) or print('Error processing \'<strong>' . $query . '\'</strong>: ' . mysqli_error($conn) . '<br /><br />');
+	mysqli_query ($GLOBALS['conn'], $query) or print('Error processing \'<strong>' . $query . '\'</strong>: ' . mysqli_error($GLOBALS['conn']) . '<br /><br />');
 }
 
 // Open file to read
