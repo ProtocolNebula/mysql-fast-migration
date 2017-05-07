@@ -5,6 +5,8 @@
  */
 //die();
 include_once 'config.php';
+require 'main.php';
+
 set_time_limit(-1);
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die('No mysql connection');
 
@@ -24,17 +26,6 @@ function executeQuery($query) {
 
 // Open file to read
 $handle = fopen("dump.sql", "r");
-
-// Replacement cache
-if ($replacements) {
-    // Converting arrays to use "str_replace" native
-    $replaceSearch = array();
-    $replaceReplace = array();
-    foreach ($replacements as $r) {
-        $replaceSearch[] = $r[0];
-        $replaceReplace[] = $r[1];
-    }
-}
 
 // "INSERT INTO" sentence base
 $insertIntoLine = false;

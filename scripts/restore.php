@@ -1,6 +1,8 @@
 <?php
 //die();
-include_once 'config.php';
+require 'config.php';
+require 'main.php';
+
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die('No mysql connection');
 
 echo 'Starting restoration to ',$dbname,'...<hr />';
@@ -13,16 +15,6 @@ if (!is_file('dump.sql')) die('No dump file found');
 // Open file to read
 $handle = fopen("dump.sql", "r");
 
-// Replacement cache
-if ($replacements) {
-    // Converting arrays to use "str_replace" native
-    $replaceSearch = array();
-    $replaceReplace = array();
-    foreach ($replacements as $r) {
-        $replaceSearch[] = $r[0];
-        $replaceReplace[] = $r[1];
-    }
-}
 
 // Loop through each line
 while (($line = fgets($handle)) !== false) {
