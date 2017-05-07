@@ -28,7 +28,7 @@ if ($replacements) {
 while (($line = fgets($handle)) !== false) {
 
 	// Skip it if it's a comment
-	if (substr($line, 0, 2) == '--' || $line == '') continue;
+	if (substr($line, 0, 2) == '--' || $line == '' || substr($line, 0, 2) == '/*') continue;
 
 	// Add this line to the current segment
 	$templine .= $line;
