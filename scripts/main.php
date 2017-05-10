@@ -5,7 +5,7 @@ if ($replacements) {
     $replaceSearch = array();
     $replaceReplace = array();
     foreach ($replacements as $r) {
-		if (!is_array($r) || isset($r[0]) || !isset($r[1])) {
+		if (!is_array($r) || !isset($r[0]) || !isset($r[1])) {
 			die('Check $replacements from config.php');
 		}
         $replaceSearch[] = $r[0];
