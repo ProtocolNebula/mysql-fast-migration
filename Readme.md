@@ -1,5 +1,9 @@
 # Mysql Fast Migration
 
+## Depecration notes
+
+This project is archived and will be no updated anymore, please check this other script (bash): https://github.com/ProtocolNebula/server-web-migration
+
 ## Description
 This is a simple PHP script which let you backup a MySQL (big databases too) and/or the web files for move it to another server.
 This is useful when you have to migrate a very big database and PHPMyAdmin fails or something or things such wordpress.
